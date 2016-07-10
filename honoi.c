@@ -17,7 +17,7 @@ void Hanoitower(int n, char frod, char torod, char aurod)
  
 int main()
 {
-    int n = 3; // Number of disks
+    int n = 4; // Number of disks
     Hanoitower(n, 'A', 'C', 'B');  // A, B and C are names of rods
     return 0;
 }
