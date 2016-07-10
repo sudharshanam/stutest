@@ -7,9 +7,9 @@
 
 struct node
 {
-    char data [ 20 ] ;
+    char d [ 20 ] ;
     char m [ 5 ] [ 20 ] ;
-    int mcount ;
+    int mc ;
     struct node * link ;
 } ;
 
@@ -112,7 +112,7 @@ void add ( char * str )
     }
 
     q -> mcount = i ;
-    if ( dic [ j ] == NULL || strcmp ( dic [ j ] -> data, str ) > 0 )
+    if ( dic [ j ] == NULL || strcmp ( dic [ j ] -> d, str ) > 0 )
     {
         r = dic [ j ] ;
         dic [ j ] = q ;
@@ -149,12 +149,12 @@ int search ( char *str )
 
     while ( n != NULL )
     {
-        strcpy ( temp1, n -> data ) ;
+        strcpy ( temp1, n -> d) ;
 
         if (  strcmp ( strupr ( temp1 ), temp2 ) == 0 )
         {
-            printf ( "\n%s\t\t%s", n -> data, n -> m [ 0 ] ) ;
-            for ( i = 1 ; i < n -> mcount ; i++ )
+            printf ( "\n%s\t\t%s", n -> d, n -> m [ 0 ] ) ;
+            for ( i = 1 ; i < n -> mc; i++ )
                 printf ( "\n\t\t%s", n -> m [ i ] ) ;
             return 1 ;
         }
@@ -178,8 +178,8 @@ void show( )
         n = dic [ i ] ;
         while ( n != NULL )
         {
-            printf ( "\n%s\t\t%s", n -> data, n -> m [ 0 ] ) ;
-            for ( j = 1 ; j < n -> mcount ; j++ )
+            printf ( "\n%s\t\t%s", n -> d, n -> m [ 0 ] ) ;
+            for ( j = 1 ; j < n -> mc; j++ )
                 printf ( "\n\t\t%s", n -> m [ j ] ) ;
             n = n -> link ;
         }
@@ -203,5 +203,5 @@ void deldic( )
     }
 }
 
-    Status API Training Shop Blog About 
+
 
