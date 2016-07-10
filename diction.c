@@ -94,7 +94,7 @@ void add ( char * str )
         return ;
     }
     q = ( struct node * ) malloc ( sizeof ( struct node ) ) ;
-    strcpy ( q -> data, str ) ;
+    strcpy ( q -> d, str ) ;
     q -> link = NULL ;
 
     for ( i = 0 ; tolower ( ch ) == 'y' && i < 5 ; i++ )
@@ -111,7 +111,7 @@ void add ( char * str )
         ch = getche( ) ;
     }
 
-    q -> mcount = i ;
+    q -> mc = i ;
     if ( dic [ j ] == NULL || strcmp ( dic [ j ] -> d, str ) > 0 )
     {
         r = dic [ j ] ;
@@ -124,7 +124,7 @@ void add ( char * str )
     {
         while ( temp != NULL )
         {
-            if ( ( strcmp ( temp -> data, str ) < 0 ) && ( ( strcmp ( temp -> link -> data, str ) > 0 ) ||
+            if ( ( strcmp ( temp -> d, str ) < 0 ) && ( ( strcmp ( temp -> link -> d, str ) > 0 ) ||
                                             temp -> link == NULL ) )
             {
                 q -> link = temp -> link ;
