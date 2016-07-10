@@ -9,9 +9,9 @@ void Hanoitower(int n, char frod, char torod, char aurod)
         printf("\n Move disk 1 from rod %c to rod %c", frod, torod);
         return;
     }
-    towerOfHanoi(n-1, frod, aurod, torod);
+    Hanoitower(n-1, frod, aurod, torod);
     printf("\n Move disk %d from rod %c to rod %c", n, frod, torod);
-    towerOfHanoi(n-1, aurod, torod, frod);
+    Hanoitower(n-1, aurod, torod, frod);
     getch();
 }
  
